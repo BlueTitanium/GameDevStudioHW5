@@ -9,3 +9,6 @@ if(!is_destroyed && ammo_remaining > 0 && keyboard_check_pressed(ord(correspondi
 }
 visible = !is_destroyed;
 
+if(obj_game_manager!=noone &&obj_game_manager.silos[index]==noone){
+	obj_game_manager.silos[index] = id;	
+}

@@ -19,17 +19,18 @@ else if(decay_timer == decay_time){
 var _inst_silo = instance_place(x,y,obj_silo);
 if(_inst_silo != noone && _inst_silo.is_destroyed == false){
 	_inst_silo.is_destroyed = true;	
-	instance_create_layer(_inst_silo.x,_inst_silo.y,"Instances",obj_explosion);
+	var ex = instance_create_layer(_inst_silo.x,_inst_silo.y,"Instances",obj_explosion);
 }
 var _inst_city = instance_place(x,y,obj_city);
 if(_inst_city != noone && _inst_city.is_destroyed == false){
 	_inst_city.is_destroyed = true;	
-	instance_create_layer(_inst_city.x,_inst_city.y,"Instances",obj_explosion);
+	var ex = instance_create_layer(_inst_city.x,_inst_city.y,"Instances",obj_explosion);
 }
 
 var _inst_missile = instance_place(x,y,obj_enemy_missile);
 if(_inst_missile != noone){
-	instance_create_layer(_inst_missile.x,_inst_missile.y,"Instances",obj_explosion);
+	var ex = instance_create_layer(_inst_missile.x,_inst_missile.y,"Instances",obj_explosion);
+	ex.color = _inst_missile.color;
 	instance_destroy(_inst_missile);
 }
 
