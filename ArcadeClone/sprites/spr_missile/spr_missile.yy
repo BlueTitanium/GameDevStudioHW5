@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_missile",
-  "bbox_bottom": 15,
+  "bbox_bottom": 14,
   "bbox_left": 0,
   "bbox_right": 15,
   "bbox_top": 0,

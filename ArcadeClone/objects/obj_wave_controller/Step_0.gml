@@ -1,11 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-if(keyboard_check_pressed(ord("R"))){
-	
-	room_restart();	
-}
-
 if(allow_spawning && missiles_to_spawn > 0 && spawn_timer <= 0){
 	var spawn_amount = clamp(floor(random_range(1,5)),1,missiles_to_spawn);
 	spawn_timer= random_range(min_spawn_timer,max_spawn_timer);
@@ -25,7 +19,7 @@ if(allow_spawning && missiles_to_spawn > 0 && spawn_timer <= 0){
 		var randomTarget = _randomTargets[floor(random_range(0,3+6))];
 		missile.destinationX = randomTarget.x;
 		missile.destinationY = randomTarget.y;
-		missile.speed = .7;
+		missile.speed = missile_speed;
 	}
 }
 var _num_amount_enemies = instance_number(obj_enemy_missile);

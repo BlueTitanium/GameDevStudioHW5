@@ -20,8 +20,8 @@ if(corresponding_silo.is_destroyed){
 	var obj_space = 15;
 	for(var i = 0;i < corresponding_silo.ammo_remaining; i++){
 		var _x = (x - (row*obj_space/2)) + num_in_row*obj_space + obj_space/2;
-
-		draw_circle(_x,y+row*obj_space + 20,r,false);
+		draw_sprite_ext(spr_missile,0,_x,y+row*obj_space + 20,.8,.8,90,c_white,1);
+		//draw_circle(_x,y+row*obj_space + 20,r,false);
 		num_in_row++;
 		if(num_in_row == row){
 			row++;	

@@ -31,6 +31,8 @@ var _inst_missile = instance_place(x,y,obj_enemy_missile);
 if(_inst_missile != noone){
 	var ex = instance_create_layer(_inst_missile.x,_inst_missile.y,"Instances",obj_explosion);
 	ex.color = _inst_missile.color;
+	global.total_points+=_inst_missile.point_value;
 	instance_destroy(_inst_missile);
+	
 }
 
