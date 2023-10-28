@@ -6,5 +6,5 @@ y = mouse_y;
 
 //have minimum cursor height
 if(room == rm_game){
-	y = clamp(y,0,700);	
+	y = clamp(y,0,730);	
 }

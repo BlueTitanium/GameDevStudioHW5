@@ -11,3 +11,9 @@ decay_time = 60;
 decay_timer = 0;
 
 color = #FF0000;
+
+audio_play_sound(obj_system.explosion_sounds[
+	floor(random_range(0,array_length(obj_system.explosion_sounds)))],
+	1,
+	false,
+	.4);

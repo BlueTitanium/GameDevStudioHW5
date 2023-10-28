@@ -16,6 +16,7 @@ if(shouldLose){
 }
 if(should_lose_timer <=0){
 	room_goto(rm_end);	
+	audio_play_sound(gameover,1,false,.4);
 }
 
 

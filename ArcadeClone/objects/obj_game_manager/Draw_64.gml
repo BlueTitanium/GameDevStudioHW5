@@ -9,7 +9,7 @@ var height = 35;
 draw_text(room_width/4,height,"" + string(global.total_points));
 draw_set_halign(fa_center);
 draw_text(room_width/2,height,"" + string(global.high_score));
-draw_set_color(#0000FF);
+draw_set_color(#00FFFF);
 draw_rectangle(room_width/4+10,height-5,room_width/4+20,height+5,false);
 
 if(show_wave_end){
@@ -43,6 +43,7 @@ if(show_wave_end){
 				} else {
 					num_bonus_ammo++;
 					silos[cur_silo].ammo_remaining--;	
+					audio_play_sound(pointget,1,false,.4);
 				}
 			}
 			if(step_timer>0){
@@ -86,6 +87,7 @@ if(show_wave_end){
 					cities[cur_city].should_show = false;
 					cur_city++;
 					num_bonus_cities++;
+					audio_play_sound(pointget,1,false,.4);
 				}
 			}
 			
@@ -104,7 +106,7 @@ if(show_wave_end){
 			draw_set_color(#FFFFFF);
 			draw_text(room_width/2-10,room_height/2,""+string(num_bonus_cities*100));
 			for(var i = 0; i < num_bonus_cities;i++){
-				draw_sprite(spr_city,0,room_width/2+16+i*(32+5),room_height/2);
+				draw_sprite(spr_city,0,room_width/2+32+i*(64+5),room_height/2);
 			}
 			
 			break;
@@ -125,13 +127,14 @@ if(show_wave_end){
 			draw_set_color(#FFFFFF);
 			draw_text(room_width/2-10,room_height/2,""+string(num_bonus_cities*100));
 			for(var i = 0; i < num_bonus_cities;i++){
-				draw_sprite(spr_city,0,room_width/2+16+i*(32+5),room_height/2);
+				draw_sprite(spr_city,0,room_width/2+32+i*(64+5),room_height/2);
 			}
 			if(step_timer>0){
 				step_timer-=1;
 			} else {
 				show_wave_end=false;
 				room_goto(rm_end);
+				audio_play_sound(win,1,false,.4);
 			}
 			break;
 		default:

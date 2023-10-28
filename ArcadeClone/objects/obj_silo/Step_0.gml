@@ -8,6 +8,11 @@ if(!is_destroyed && ammo_remaining > 0
 	missile.destinationX = obj_cursor.x;
 	missile.destinationY = obj_cursor.y;
 	ammo_remaining -= 1;
+	audio_play_sound(obj_system.shoot_sounds[
+	floor(random_range(0,array_length(obj_system.shoot_sounds)))],
+	1,
+	false,
+	.4);
 }
 visible = !is_destroyed;
 

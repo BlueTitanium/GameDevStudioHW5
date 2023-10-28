@@ -9,7 +9,7 @@ var height = 35;
 draw_text(room_width/4,height,"" + string(global.total_points));
 draw_set_halign(fa_center);
 draw_text(room_width/2,height,"" + string(global.high_score));
-draw_set_color(#0000FF);
+draw_set_color(#00FFFF);
 draw_rectangle(room_width/4+10,height-5,room_width/4+20,height+5,false);
 
 draw_set_color(#FFFFFF);

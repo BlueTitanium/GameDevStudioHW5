@@ -3,8 +3,9 @@
 
 
 
-if(keyboard_check_pressed(ord("R"))){
+if(room!=rm_start && keyboard_check_pressed(ord("R"))){
 	
 	room_goto(rm_start);
+	audio_play_sound(start,1,false,.4);
 }
 

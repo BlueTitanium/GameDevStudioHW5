@@ -5,11 +5,13 @@ if(growth_timer < growth_time){
 	growth_timer++;	
 	image_xscale = lerp(0,max_scale,growth_timer/growth_time);
 	image_yscale = lerp(0,max_scale,growth_timer/growth_time);
+	color = merge_color(#FF0000,#0000FF,growth_timer*3/growth_time);
 }
 else if(growth_timer == growth_time && decay_timer < decay_time){
 	decay_timer++;
 	image_xscale = lerp(max_scale, 0, decay_timer/decay_time);
 	image_yscale = lerp(max_scale, 0, decay_timer/decay_time);
+	color = merge_color(#0000FF,#FF0000,decay_timer*3/decay_time);
 }
 else if(decay_timer == decay_time){
 	instance_destroy();	

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_plane",
+  "name": "obj_bg_ground",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
@@ -25,7 +25,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "missilecommandbg_ground",
+    "path": "sprites/missilecommandbg_ground/missilecommandbg_ground.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

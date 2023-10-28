@@ -8,10 +8,10 @@ _trail_fx = obj_particle_controller.create_particle_trail(color,1000);
 point_value = 25;
 
 can_split = random_range(0,1);
-if(y > room_height-460){
-can_split_height = random_range(y+50,room_height-400);
+if(y < room_height-460){
+	can_split_height = random_range(y+50,room_height-400);
 } else {
-can_split = 1; //cannot split	
-can_split_height=room_height;
+	can_split = 1; //cannot split	
+	can_split_height=room_height;
 }
 has_split = false;

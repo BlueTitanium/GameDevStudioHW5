@@ -7,8 +7,9 @@
 
 // Inherit the parent event
 event_inherited();
-//30% chance to split
-if(can_split < 0.3 && !has_split && y > can_split_height){
+//50% chance to split
+if(can_split < 0.5 && !has_split && y > can_split_height){
+		//do spawn code
 		var missile = instance_create_layer(x,y,"Instances",obj_enemy_missile);
 		var _randomTargets = 
 		[instance_find(obj_silo,0),
