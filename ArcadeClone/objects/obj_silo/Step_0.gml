@@ -19,3 +19,13 @@ visible = !is_destroyed;
 if(obj_game_manager!=noone &&obj_game_manager.silos[index]==noone){
 	obj_game_manager.silos[index] = id;	
 }
+
+if(!is_destroyed && ammo_remaining <= 3
+&& !audio_played
+&& obj_game_manager!=noone && !obj_game_manager.show_wave_end){
+	audio_played = true;
+	audio_play_sound(warning,
+	1,
+	false,
+	.7);
+}
